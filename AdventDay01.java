@@ -12,10 +12,10 @@ public class AdventDay01 {
 
         List<Integer> l1 =new ArrayList<>();
         List<Integer> l2 =new ArrayList<>();
-
+        final String SEPARATOR="   ";
         try {
             try (Stream<String> lines = Files.lines(Path.of("input_day1.txt"))) {
-                lines.map(x -> x.split("   "))
+                lines.map(x -> x.split(SEPARATOR))
                         .forEach(parts -> {
                             l1.add(Integer.valueOf(parts[0]));
                             l2.add(Integer.valueOf(parts[1]));
